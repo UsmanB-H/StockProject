@@ -21,7 +21,7 @@ export default function LoginScreen({ navigation }) {
           <Text>Enter Your Username</Text>
           <TextInput style={styles.input} placeholder="Username"></TextInput>
           <Text>Enter Your Password</Text>
-          <TextInput style={styles.input} placeholder="Password"></TextInput>
+          <TextInput secureTextEntry={true} style={styles.input} placeholder="Password"></TextInput>
           <Button title="Login In"></Button>
         </View>
         <StatusBar style="auto" />
@@ -48,7 +48,8 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     marginBottom: 30,
-    color: "#1652f0"
+    color: "#1652f0",
+    textAlign: "center",
   },
   container2: {
     alignItems: "center",
