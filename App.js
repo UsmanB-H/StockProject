@@ -22,7 +22,7 @@ export default function App() {
             color: "#5A5A5A",
           }}
         >
-          Welcome to Presidential Stock
+          Welcome to Presidential Stocks
         </Text>
       </TouchableOpacity>
       <StatusBar style="auto" />
