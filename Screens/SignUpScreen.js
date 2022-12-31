@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   SafeAreaView,
   Image,
+  TextInput,
 } from "react-native";
 
 export default function SignUpScreen({ navigation }) {
@@ -15,7 +16,12 @@ export default function SignUpScreen({ navigation }) {
     <>
       <SafeAreaView style={styles.safeViewContainer}></SafeAreaView>
       <View style={styles.container}>
-        <Text>Sign-Up</Text>
+        <Text style={styles.header}>Sign in to National Stocker</Text>
+        <Text>Enter Your Username</Text>
+        <TextInput style={styles.input} placeholder="Username"></TextInput>
+        <Text>Enter Your Password</Text>
+        <TextInput style={styles.input} placeholder="Password"></TextInput>
+        <Button title="Login In"></Button>
         <StatusBar style="auto" />
       </View>
     </>
@@ -25,8 +31,20 @@ export default function SignUpScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#1652f0",
+    backgroundColor: "#FFFF",
     alignItems: "center",
     justifyContent: "center",
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: "#777",
+    padding: 8,
+    margin: 10,
+    width: 200,
+  },
+  header: {
+    fontSize: 30,
+    fontWeight: "bold",
+    marginBottom: 30,
   },
 });
