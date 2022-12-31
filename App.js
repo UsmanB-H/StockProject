@@ -1,73 +1,32 @@
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Button,
-  TouchableOpacity,
-  SafeAreaView,
-  Image,
-} from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { setStatusBarHidden } from "expo-status-bar";
+import HomeScreen from "./screens/HomeScreen";
+import LoginScreen from "./screens/LoginScreen";
+import SignUpScreen from "./screens/SignUpScreen";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <>
-      <SafeAreaView style={styles.safeViewContainer}></SafeAreaView>
-      <View style={styles.container}>
-        <Image
-          source={{
-            uri: "https://cdn.freebiesupply.com/logos/large/2x/stock-logo-png-transparent.png",
-          }}
-          style={{ width: 300, height: 700 }}
-          resizeMode="contain"
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ headerShown: false }}
         />
-        <View style={styles.ButtonContainer}>
-          <View style={styles.LoginContainer}>
-            <Button
-              style={styles.LoginButton}
-              title="Login In"
-              color="#5A5A5A"
-            ></Button>
-          </View>
-          <View style={styles.SignUpContainer}>
-            <Button
-              style={styles.SignUpButton}
-              title="Sign Up"
-              color="#5A5A5A"
-            ></Button>
-          </View>
-        </View>
-        <StatusBar style="auto" />
-      </View>
-    </>
+        <Stack.Screen
+          name="LogIn"
+          component={LoginScreen}
+          options={{ title: "Log In" }}
+        />
+        <Stack.Screen
+          name="SignUp"
+          component={SignUpScreen}
+          options={{ title: "Sign Up!" }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#1652f0",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  ButtonContainer: {
-    justifyContent: "space-evenly",
-    flexDirection: "row",
-  },
-  LoginContainer: {
-    backgroundColor: "#FFFF",
-    padding: 2,
-    borderRadius: 10,
-    marginRight: 20,
-  },
-  SignUpContainer: {
-    backgroundColor: "#FFFF",
-    padding: 2,
-    borderRadius: 10,
-  },
-  safeViewContainer: {
-    backgroundColor: "#1652f0",
-  },
-  ImageContainer: {},
-});

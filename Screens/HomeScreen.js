@@ -1,27 +1,75 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Button, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  TouchableOpacity,
+  SafeAreaView,
+  Image,
+} from "react-native";
 
 export default function HomeScreen({ navigation }) {
   return (
-    <View style={styles.container}>
-      <Button 
-        title="Navigate to second screen with french"
-        onPress={() => navigation.navigate("Second", { language: "french" })}
-      />
-      <Button 
-        title="Navigate to second screen with english"
-        onPress={() => navigation.navigate("Second", { language: "english" })}
-      />
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <SafeAreaView style={styles.safeViewContainer}></SafeAreaView>
+      <View style={styles.container}>
+        <Image
+          source={{
+            uri: "https://cdn.freebiesupply.com/logos/large/2x/stock-logo-png-transparent.png",
+          }}
+          style={{ width: 300, height: 700 }}
+          resizeMode="contain"
+        />
+        <View style={styles.ButtonContainer}>
+          <View style={styles.LoginContainer}>
+            <Button
+              style={styles.LoginButton}
+              title="Login In"
+              onPress={() => navigation.navigate("LogIn")}
+              color="#5A5A5A"
+            ></Button>
+          </View>
+          <View style={styles.SignUpContainer}>
+            <Button
+              style={styles.SignUpButton}
+              title="Sign Up"
+              onPress={() => navigation.navigate("SignUp")}
+              color="#5A5A5A"
+            ></Button>
+          </View>
+        </View>
+        <StatusBar style="auto" />
+      </View>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#1652f0",
+    alignItems: "center",
+    justifyContent: "center",
   },
+  ButtonContainer: {
+    justifyContent: "space-evenly",
+    flexDirection: "row",
+  },
+  LoginContainer: {
+    backgroundColor: "#FFFF",
+    padding: 2,
+    borderRadius: 10,
+    marginRight: 20,
+  },
+  SignUpContainer: {
+    backgroundColor: "#FFFF",
+    padding: 2,
+    borderRadius: 10,
+  },
+  safeViewContainer: {
+    backgroundColor: "#1652f0",
+  },
+  ImageContainer: {},
 });
