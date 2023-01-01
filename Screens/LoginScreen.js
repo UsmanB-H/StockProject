@@ -107,15 +107,6 @@ export default function LoginScreen({ navigation }) {
             >
               Don't have an account? Register
             </Text>
-            {/*}      <Text>Enter Your Username</Text>
-          <TextInput style={styles.input} placeholder="Username"></TextInput>
-          <Text>Enter Your Password</Text>
-          <TextInput secureTextEntry={true} style={styles.input} placeholder="Password"></TextInput>
-          <Button 
-            title="Login In"
-            onPress={() => navigation.navigate("MainScreen")}
-          ></Button>
-  */}
           </View>
           <StatusBar style="auto" />
         </View>

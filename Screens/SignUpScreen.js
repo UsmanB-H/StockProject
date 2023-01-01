@@ -143,31 +143,7 @@ export default function SignUpScreen({ navigation }) {
                 >
                   Already have an account? Login
                 </Text>
-                {/*         <Text>Enter Your First Name</Text>
-            <TextInput
-              style={styles.input}
-              placeholder="First Name"
-            ></TextInput>
-            <Text>Enter Your Last Name</Text>
-            <TextInput style={styles.input} placeholder="Last Name"></TextInput>
-            <Text>Enter Your Email</Text>
-            <TextInput style={styles.input} placeholder="Email"></TextInput>
-            <Text>Enter Your Username</Text>
-            <TextInput style={styles.input} placeholder="Username"></TextInput>
-            <Text>Enter Your Password</Text>
-            <TextInput
-              secureTextEntry={true}
-              style={styles.input}
-              placeholder="Password"
-            ></TextInput>
-*/}
               </View>
-              {/*}
-          <Button
-            title="Sign Up"
-            onPress={() => navigation.navigate("MainScreen")}
-          ></Button>
-*/}
             </View>
             <StatusBar style="auto" />
           </View>
