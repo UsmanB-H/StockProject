@@ -1,2 +1,2 @@
 # StockProject
-Download these files and see if runs
+Download these files and see if it runs
