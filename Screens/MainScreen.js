@@ -19,6 +19,7 @@ export default function MainScreen({ navigation }) {
       <View style={styles.container}>
         <Text style={styles.text}>Coming Soon</Text>
         <StatusBar style="auto" />
+        <View style={styles.NavBar}></View>
       </View>
     </>
   );
@@ -35,5 +36,5 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     color: "white",
-  }
+  },
 });
