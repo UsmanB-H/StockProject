@@ -4,6 +4,7 @@ import { setStatusBarHidden } from "expo-status-bar";
 import HomeScreen from "./screens/HomeScreen";
 import LoginScreen from "./screens/LoginScreen";
 import SignUpScreen from "./screens/SignUpScreen";
+import MainScreen from "./screens/MainScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,11 @@ export default function App() {
           name="SignUp"
           component={SignUpScreen}
           options={{ title: "Sign Up" }}
+        />
+        <Stack.Screen
+          name="MainScreen"
+          component={MainScreen}
+          options={{ title: "Welcome" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

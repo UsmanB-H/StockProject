@@ -26,7 +26,10 @@ export default function SignUpScreen({ navigation }) {
           <TextInput style={styles.input} placeholder="Username"></TextInput>
           <Text>Enter Your Password</Text>
           <TextInput secureTextEntry={true} style={styles.input} placeholder="Password"></TextInput>
-          <Button title="Sign Up"></Button>
+          <Button 
+            title="Sign Up"
+            onPress={() => navigation.navigate("MainScreen")}
+          ></Button>
         </View>
         <StatusBar style="auto" />
       </View>
